@@ -1,0 +1,4 @@
+ip_address,ip_range,as_number,provider_name
+165.21.21.38,"['165.21.0.0', '165.21.23.255']",3758,SINGNET SingNet
+2406:3003:2002:a98:7525:5ec7:d173:7407,"['2406:3003:1056::', '2406:3003:2027:ffff:ffff:ffff:ffff:ffff']",55430,STARHUBINTERNET-AS-NGNBN Starhub Internet Pte Ltd
+10.111.2.17,NA,NA,NA
