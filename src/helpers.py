@@ -16,17 +16,20 @@ def scrape_single_asn(ip_address, debug):
     response = requests.get(api_url)
 
     as_number = "NA"
-    ip_range = "NA"
     provider_name = "NA"
+    ip_range_start = "NA"
+    ip_range_last = "NA"
     if response.status_code == 200 and response.json()['announced']:
         response_json = response.json()
         as_number = response_json['as_number']
-        ip_range = [response_json['first_ip'], response_json['last_ip']]
+        ip_range_start = response_json['first_ip']
+        ip_range_last = response_json['last_ip']
         provider_name = response_json['as_description']
     
     result = {
         "ip_address": ip_address,
-        "ip_range": ip_range,
+        "ip_range_start": ip_range_start,
+        "ip_range_last": ip_range_last,
         "as_number": as_number,
         "provider_name": provider_name
     }

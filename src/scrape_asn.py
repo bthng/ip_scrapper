@@ -8,7 +8,7 @@ from helpers import scrape_single_asn, scrape_all
 
 def main():
     _date = date.today().strftime("%Y%m%d")
-    cols=["ip_address", "ip_range", "as_number", "provider_name"]
+    cols=["ip_address", "ip_range_start", "ip_range_last", "as_number", "provider_name"]
     ip_list = list(pd.read_csv(f"data/{_date}/ip_list.csv")['ip_addresses'])
     df = scrape_all(ip_list, cols, scrape_single_asn, debug=True)
     if _date not in os.listdir("results"):
