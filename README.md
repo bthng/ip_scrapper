@@ -2,16 +2,24 @@
 ## IP Scrapper
 Scripts used †o scrape IP results for TW.
 
-### Note:
-to run: `python3 src/scrape_virustotal.py`
+- Step1: Create a new `.env` file, copy and paste template from `.env_demo` over
+- Step2: `source .env`
 
-## References
 
 ### asn
+to run: `python3 src/crawl_asn.py`
+output: asn_results folder
 
 ### virustotal
+to run: `python3 src/virustotal.py`
+output: virustotal_results folder
 https://developers.virustotal.com/reference#ip-address-report
 
-### TODO
-- in the event TW can't provide us with the api key for virustotal, add the logic to access the api only 4 times in a minutes. 
-- for iptoasn.com --> to monitor time taken to pull data from api, may be faster to download the entire database and filter from there. 
+### whois quarterly
+to run: `python3 ccTLDs.py`
+to run: `gTLDs.py`
+output: cctlds and gtlds folder respectively
+
+### whois daily
+to run: `python3 whois_daily.py`
+output: results_final_whoisdaily folder

@@ -1,2 +1,11 @@
 .vscode/
-__pyche__/*
+__pycache__/*
+.env
+.git/*
+*.csv
+results/*
+*.tar.gz
+*.tsv.gz
+results/*
+results_final_whoisdaily/*
+results_merged/*
