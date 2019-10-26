@@ -1,7 +1,8 @@
 import requests
 import pandas as pd
+import os
 
-VT_API_KEY = "11c538211c697150a3eab76db784a7a31995bc810c2b78093015ec005614689c"
+VT_API_KEY = os.environ['VT_API_KEY'] 
 
 def scrape_single_asn(ip_address, debug):
     """Scrape for a single ip address

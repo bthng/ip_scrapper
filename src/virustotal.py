@@ -10,9 +10,9 @@ def main():
     cols=["ip_address", "negative_count", "positive_count", "discovery_date"]
     ip_list = list(pd.read_csv(f"data/{_date}/ip_list.csv")['ip_addresses'])
     df = scrape_all(ip_list, cols, scrape_single_vt, debug=True)
-    if _date not in os.listdir("results"):
-        os.mkdir(f"results/{_date}")
-    df.to_csv(f"results/{_date}/virustotal.csv", index=False)
+    if _date not in os.listdir("virustotal_results"):
+        os.mkdir(f"virustotal_results/{_date}")
+    df.to_csv(f"virustotal_results/{_date}/virustotal.csv", index=False)
 
     
 if __name__ == "__main__":

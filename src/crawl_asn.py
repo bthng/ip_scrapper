@@ -6,12 +6,12 @@ import os
 
 _date = date.today().strftime("%Y%m%d")
 ZIPSAVETO = f"/Users/brendathng/Documents/Github/ip_scrapper/tmp/{_date}/asn.tsv.gz"
-SAVETO = f"/Users/brendathng/Documents/Github/ip_scrapper/results/{_date}/asn.csv"
+SAVETO = f"/Users/brendathng/Documents/Github/ip_scrapper/asn_results/{_date}/asn.csv"
 
 def prepare_folders():
-    if _date not in os.listdir("/Users/brendathng/Documents/Github/ip_scrapper/results"):
+    if _date not in os.listdir("/Users/brendathng/Documents/Github/ip_scrapper/asn_results"):
         os.mkdir(f"/Users/brendathng/Documents/Github/ip_scrapper/tmp/{_date}")
-        os.mkdir(f"/Users/brendathng/Documents/Github/ip_scrapper/results/{_date}")
+        os.mkdir(f"/Users/brendathng/Documents/Github/ip_scrapper/asn_results/{_date}")
 
 
 def download_file(zipsaveto):
